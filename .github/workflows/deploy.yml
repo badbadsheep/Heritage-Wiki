@@ -41,8 +41,15 @@ jobs:
       - name: 构建（MkDocs）
         run: mkdocs build
 
+      # ⚠️ 首次发布前，请先在仓库 Settings → Pages → Source 选择「GitHub Actions」（一次性，约 10 秒）
+      #    未开启时本步骤会报 "Get Pages site failed / Not Found"，属于正常提示，开启后重跑即可。
       - name: 配置 Pages
         uses: actions/configure-pages@v5
+        # 想让这一步也全自动：新建一个含 pages:write 权限的 PAT，存为仓库 Secret（如 PAGES_PAT），
+        # 再取消下面三行注释（GITHUB_TOKEN 没有开启 Pages 的权限）：
+        # with:
+        #   enablement: true
+        #   token: ${{ secrets.PAGES_PAT }}
 
       - name: 上传站点产物
         uses: actions/upload-pages-artifact@v3

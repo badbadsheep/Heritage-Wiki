@@ -4,8 +4,8 @@
 #  手动命令：.venv\Scripts\python.exe -m mkdocs serve --dev-addr 127.0.0.1:8000
 # ============================================================
 
-# 发布到 GitHub Pages 后，把下一行改成你的真实地址并取消注释（影响 sitemap.xml 与分享卡片）：
-# site_url: https://<你的用户名>.github.io/Heritage-Wiki/
+# 站点正式地址（GitHub Pages）：影响 sitemap.xml、canonical 与分享卡片
+site_url: https://badbadsheep.github.io/Heritage-Wiki/
 
 site_name: 非遗志 · 世界非物质文化遗产百科
 site_description: 人间百工，皆有来处。以图文汇录世界非物质文化遗产——中国十大门类、1557 项国家级代表性项目全量收录。
