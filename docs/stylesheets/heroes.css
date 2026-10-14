@@ -1,0 +1,73 @@
+/* ============================================================================
+   非遗志 · HeritageWiki —— 大图与气泡图版索引
+   ----------------------------------------------------------------------------
+   说明：所有 url() 相对于本文件（/stylesheets/），指向 /assets/img/ 下的图片。
+   图片暂缺时优雅回退到纸色底（见 extra.css 的 --hero / --bg 回退）。
+   ========================================================================= */
+
+/* ---------- 大图 hero：首页与两卷总览 ---------- */
+.hero--home  { --hero: url("../assets/img/heroes/home.png"); }
+.hero--china { --hero: url("../assets/img/heroes/china.png"); }
+.hero--world { --hero: url("../assets/img/heroes/world.png"); }
+
+/* ---------- 大图 hero：十大门类 ---------- */
+.hero--wenxue { --hero: url("../assets/img/heroes/wenxue.png"); }
+.hero--yinyue { --hero: url("../assets/img/heroes/yinyue.png"); }
+.hero--wudao  { --hero: url("../assets/img/heroes/wudao.png"); }
+.hero--xiju   { --hero: url("../assets/img/heroes/xiju.png"); }
+.hero--quyi   { --hero: url("../assets/img/heroes/quyi.png"); }
+.hero--tiyu   { --hero: url("../assets/img/heroes/tiyu.png"); }
+.hero--meishu { --hero: url("../assets/img/heroes/meishu.png"); }
+.hero--jiyi   { --hero: url("../assets/img/heroes/jiyi.png"); }
+.hero--yiyao  { --hero: url("../assets/img/heroes/yiyao.png"); }
+.hero--minsu  { --hero: url("../assets/img/heroes/minsu.png"); }
+
+/* ---------- 门类气泡（首页 / 中国非遗总览） ---------- */
+.bubble--wenxue { --bg: url("../assets/img/bubbles/cat-wenxue.png"); --accent: var(--c-wenxue); }
+.bubble--yinyue { --bg: url("../assets/img/bubbles/cat-yinyue.png"); --accent: var(--c-yinyue); }
+.bubble--wudao  { --bg: url("../assets/img/bubbles/cat-wudao.png");  --accent: var(--c-wudao); }
+.bubble--xiju   { --bg: url("../assets/img/bubbles/cat-xiju.png");   --accent: var(--c-xiju); }
+.bubble--quyi   { --bg: url("../assets/img/bubbles/cat-quyi.png");   --accent: var(--c-quyi); }
+.bubble--tiyu   { --bg: url("../assets/img/bubbles/cat-tiyu.png");   --accent: var(--c-tiyu); }
+.bubble--meishu { --bg: url("../assets/img/bubbles/cat-meishu.png"); --accent: var(--c-meishu); }
+.bubble--jiyi   { --bg: url("../assets/img/bubbles/cat-jiyi.png");   --accent: var(--c-jiyi); }
+.bubble--yiyao  { --bg: url("../assets/img/bubbles/cat-yiyao.png");  --accent: var(--c-yiyao); }
+.bubble--minsu  { --bg: url("../assets/img/bubbles/cat-minsu.png");  --accent: var(--c-minsu); }
+
+/* ---------- 首页双入口卡片 ---------- */
+.entry-card--china { background-image: url("../assets/img/heroes/china.png"); }
+.entry-card--world { background-image: url("../assets/img/heroes/world.png"); }
+
+/* ---------- 专题文章大图（专题页顶部横幅） ---------- */
+.hero--art-liangzhu     { --hero: url("../assets/img/articles/liangzhu.png"); }
+.hero--art-gesaer       { --hero: url("../assets/img/articles/gesaer.png"); }
+.hero--art-guqin        { --hero: url("../assets/img/articles/guqin.png"); }
+.hero--art-dongzu-dage  { --hero: url("../assets/img/articles/dongzu-dage.png"); }
+.hero--art-shiwu        { --hero: url("../assets/img/articles/shiwu.png"); }
+.hero--art-ansai        { --hero: url("../assets/img/articles/ansai.png"); }
+.hero--art-jingju       { --hero: url("../assets/img/articles/jingju.png"); }
+.hero--art-kunqu        { --hero: url("../assets/img/articles/kunqu.png"); }
+.hero--art-suzhou-pingtan { --hero: url("../assets/img/articles/suzhou-pingtan.png"); }
+.hero--art-xiangsheng   { --hero: url("../assets/img/articles/xiangsheng.png"); }
+.hero--art-taiji        { --hero: url("../assets/img/articles/taiji.png"); }
+.hero--art-wuqiao-zaji  { --hero: url("../assets/img/articles/wuqiao-zaji.png"); }
+.hero--art-jianzhi      { --hero: url("../assets/img/articles/jianzhi.png"); }
+.hero--art-yangliuqing-nianhua { --hero: url("../assets/img/articles/yangliuqing-nianhua.png"); }
+.hero--art-jingdezhen   { --hero: url("../assets/img/articles/jingdezhen.png"); }
+.hero--art-yunjin       { --hero: url("../assets/img/articles/yunjin.png"); }
+.hero--art-zhenjiu      { --hero: url("../assets/img/articles/zhenjiu.png"); }
+.hero--art-tongrentang  { --hero: url("../assets/img/articles/tongrentang.png"); }
+.hero--art-mazu         { --hero: url("../assets/img/articles/mazu.png"); }
+.hero--art-chunjie      { --hero: url("../assets/img/articles/chunjie.png"); }
+
+/* ---------- 人物传记大图 ---------- */
+.hero--person-kushulan      { --hero: url("../assets/img/craftsmen/kushulan.png"); }
+.hero--person-tanzhenshan   { --hero: url("../assets/img/craftsmen/tanzhenshan.png"); }
+.hero--person-lixiangting   { --hero: url("../assets/img/craftsmen/lixiangting.png"); }
+.hero--person-yuexiang      { --hero: url("../assets/img/craftsmen/yuexiang.png"); }
+.hero--person-meilanfang    { --hero: url("../assets/img/craftsmen/meilanfang.png"); }
+.hero--person-shantianfang  { --hero: url("../assets/img/craftsmen/shantianfang.png"); }
+.hero--person-chenxiaowang  { --hero: url("../assets/img/craftsmen/chenxiaowang.png"); }
+.hero--person-xuchaoxing    { --hero: url("../assets/img/craftsmen/xuchaoxing.png"); }
+.hero--person-chengshengnong { --hero: url("../assets/img/craftsmen/chengshengnong.png"); }
+.hero--person-linjinbang    { --hero: url("../assets/img/craftsmen/linjinbang.png"); }

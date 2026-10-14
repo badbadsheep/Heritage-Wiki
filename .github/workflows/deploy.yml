@@ -1,0 +1,62 @@
+# ============================================================
+#  非遗志 · HeritageWiki —— 自动构建并发布到 GitHub Pages
+#  触发：推送到 main 分支，或在 Actions 页面手动运行
+#  发布地址：https://<你的用户名>.github.io/<仓库名>/
+# ============================================================
+name: 构建并发布非遗志
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# 允许工作流发布到 Pages（OIDC 方式，无需个人令牌）
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同时只跑一个发布任务，避免相互覆盖
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 构建站点
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 构建（MkDocs）
+        run: mkdocs build
+
+      - name: 配置 Pages
+        uses: actions/configure-pages@v5
+
+      - name: 上传站点产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: 发布到 GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4

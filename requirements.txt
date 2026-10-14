@@ -1,0 +1,9 @@
+# 非遗志 · HeritageWiki —— 站点运行依赖
+# 安装：  pip install -r requirements.txt
+# 国内镜像：pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+mkdocs>=1.6,<2
+mkdocs-material>=9.5,<10
+
+# 说明：中文搜索由 Material 内置分词器提供，无需额外依赖。
+# 如需在本地脚本中做中文分词加工（可选）：pip install jieba
