@@ -137,6 +137,7 @@ git push -u origin main
 ```
 
 - 之后每次 `git push` 都会自动重新发布；
+- **如果第一次运行失败**，且失败步骤是「配置 Pages」并提示 `Get Pages site failed`：说明第 ③ 步还没做。开启后回到 Actions，点该次运行的 **Re-run all jobs** 即可（`configure-pages` 无法用默认的 `GITHUB_TOKEN` 自动开启 Pages，这是 GitHub 的限制）；
 - 站点默认发布 `site/` 内容（本地 `site/` 目录已被 `.gitignore` 忽略，CI 里现场构建）；
 - 想要自己的域名：Settings → Pages → Custom domain 填域名，再在域名服务商加一条 CNAME 记录指向 `<用户名>.github.io`；
 - 若仓库体积偏大导致首次推送缓慢，可改用 GitHub Desktop 推送，或先执行第 4 步的「图片瘦身」思路（见下）；
